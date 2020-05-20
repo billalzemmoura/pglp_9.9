@@ -23,7 +23,7 @@
 <h1>Rectangle</h1>
 <h2>  pour créer un rectangle :</h2>
 <p>un rectangle prend en parametre 1 point (x,y==>des entier) ce point est celui du bas a gauche  d'un rectangle les autres seront calculer a base des coordonés de ce dernier et la largeur(entier 3eme parametre) et la longeur(entier 2eme parametre) inserer :</p>
-    leNosmDuRectangle=rectangle((42,55),88,66)
+    leNomDuRectangle=rectangle((42,55),88,66)
 
 <h1>move</h1>
 <p>  pour bouger une formes ou un dessin :(x,y)=(entier,entier) vecteur de déplacement<p>
