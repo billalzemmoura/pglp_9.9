@@ -20,4 +20,4 @@ leNomDuDessin=dessin()
 
 
 --  pour crer un rectangle :un rectangle prend en parametre 1 point (x,y==>des entier) ce point est celui du bas a gauche  d'un rectangle les autres seront calculer a base des coordonés de ce dernier et la largeur(entier 3eme parametre) et la longeur(entier 2eme parametre) inserer :
-    leNomDuRectangle=rectangle((42,55),88,66)
+    leNosmDuRectangle=rectangle((42,55),88,66)
