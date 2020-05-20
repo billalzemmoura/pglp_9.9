@@ -1,6 +1,6 @@
 # pglp_9.9
 
---  pour crer un dessin :
+<h1>pour crer un dessin :</h1>
 leNomDuDessin=dessin()
 --  pour ajouter une formes ou dessin dans un dessin 
 
