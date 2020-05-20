@@ -31,14 +31,15 @@ public class Rectangle extends Forme{
 	int longeur;
 	
 	
-	public Rectangle(String nom,Point A,Point B,Point C,Point D,int largeur,int longeur) {
+	public Rectangle(String nom,Point A,int longeur,int largeur) {
 		 this.A.setXY(A.getX(),A.getY());
-		 this.B.setXY(B.getX(),B.getY());
-		 this.C.setXY(C.getX(),C.getY());
-		 this.D.setXY(D.getX(),D.getY());
+		 this.B.setXY(A.getX()+longeur,A.getY());
+		 this.C.setXY(A.getX(),A.getY()+largeur);
+		 this.D.setXY(A.getX()+longeur,A.getY()+largeur);
 		 this.nom=nom;
 	     this.largeur=largeur;
 	     this.longeur=longeur;
+
 	}
 
 	public ArrayList<Point> getcoordonnes() {

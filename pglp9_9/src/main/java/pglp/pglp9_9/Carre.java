@@ -11,14 +11,22 @@ public class Carre extends Forme {
 	Point D =new Point();
 	int cote;
 	
-	public Carre(String nom,Point A,Point B,Point C,Point D,int cote) {
+	public int getCote() {
+		return cote;
+	}
+
+	public void setCote(int cote) {
+		this.cote = cote;
+	}
+
+	public Carre(String nom,Point A,int cote) {
 		 this.A.setXY(A.getX(),A.getY());
-		 this.B.setXY(B.getX(),B.getY());
-		 this.C.setXY(C.getX(),C.getY());
-		 this.D.setXY(D.getX(),D.getY()); 
+		 this.B.setXY(A.getX()+cote,A.getY());
+		 this.C.setXY(A.getX(),A.getY()+cote);
+		 this.D.setXY(A.getX()+cote,A.getY()+cote); 
 		 this.nom=nom;
 		 this.cote=cote;
-		}
+		 }
 
 	public String getNom() {
 		return nom;
@@ -28,13 +36,6 @@ public class Carre extends Forme {
 		this.nom = nom;
 	}
 
-	public int getCote() {
-		return cote;
-	}
-
-	public void setCote(int cote) {
-		this.cote = cote;
-	}
 
 	public ArrayList<Point> getcoordonnes() {
 		 ArrayList<Point> coordone=new ArrayList<Point>();

@@ -2,8 +2,8 @@ package pglp.pglp9_9;
 
 public class ExpReg {
 	static String expregCreateCercle="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(cercle|CERCLE)(\\s)*(\\(){2}(\\d+),(\\d+)(\\)),(\\d+)(\\))$";   
-	static String expregCreateCaree="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(caree|CAREE)(\\s)*(\\()(\\([0-9]+,[0-9]+(\\)),){4}(\\d+)(\\))$";   
-	static String expregCreateRectangle="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(rectangle|RECTANGLE)(\\s)*(\\()(\\([0-9]+,[0-9]+(\\)),){4}([0-9]+,[0-9]+)(\\))$";
+	static String expregCreateCaree="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(carre|CARRE)(\\s)*(\\()(\\([0-9]+,[0-9]+(\\)),)(\\d+)(\\))$";   
+	static String expregCreateRectangle="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(rectangle|RECTANGLE)(\\s)*(\\()(\\([0-9]+,[0-9]+(\\)),)([0-9]+,[0-9]+)(\\))$";
 	static String expregCreateTriangle="^([a-zA-Z]+)(\\d*)(\\s)*=(\\s)*(triangle|TRIANGLE)(\\s)*(\\()((\\()[0-9]+,[0-9]+(\\)),){2}(\\()[0-9]+,[0-9]+(\\))(\\))$";
 	static String expregMove="^(\\s)*(move|MOVE)(\\s)*(\\()([a-zA-Z]+)(\\d*),(\\()[0-9]+,[0-9]+(\\)){2}$";
 	static String commande ="u2dd=Cercle((0,00),7)";

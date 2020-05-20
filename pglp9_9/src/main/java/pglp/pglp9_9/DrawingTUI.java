@@ -40,7 +40,7 @@ public class DrawingTUI {
 }
 		 if (f instanceof Carre) {
 				
-			 System.out.print("Caree(");
+			 System.out.print("Carre(");
 			 for (int i = 0; i < 4; i++) {
 				
 			
@@ -119,6 +119,7 @@ public class DrawingTUI {
 	 }
 	 
 	 private Forme ExcuteCommandeQuit(String string, String commande) {
+		System.out.println("tout les formes et les dessins que vous avez crer sont sauvgarder");
 		System.exit(0);
 		return null;
 	}
@@ -300,12 +301,10 @@ public class DrawingTUI {
 			ArrayList<String> valeurs=decortiquerCommande(commandeBrute);
 			try {
 				
-				ArrayList<Point> points= recupererCoordone(valeurs,4);
+				ArrayList<Point> points= recupererCoordone(valeurs,1);
 				if (ddf.find(valeurs.get(0))==null) {
-					
-				
-			    cotee=Integer.parseInt(valeurs.get(10));
-			    return (Carre) ddf.create(commande.excute( valeurs.get(0),points.get(0),points.get(1), points.get(2),points.get(3), cotee));
+					cotee=Integer.parseInt(valeurs.get(4));
+			    return (Carre) ddf.create(commande.excute( valeurs.get(0),points.get(0),cotee));
 			}else {
 				System.out.println("le nom :"+" "+valeurs.get(0)+" existe deja");
 			return null;
@@ -371,11 +370,16 @@ public class DrawingTUI {
 				if (ddf.find(valeurs.get(0))==null) {
 					
 				
-				ArrayList<Point >points=recupererCoordone(valeurs, 4);
-			    longeur=Integer.parseInt(valeurs.get(10));
-			    largeur=Integer.parseInt(valeurs.get(11));
-			    
-				return (Rectangle) ddf.create(commande.excute( valeurs.get(0),points.get(0),points.get(1),points.get(2),points.get(3),largeur,longeur));
+				ArrayList<Point >points=recupererCoordone(valeurs, 1);
+			    longeur=Integer.parseInt(valeurs.get(4));
+			    largeur=Integer.parseInt(valeurs.get(5));
+			    if (longeur>largeur) {
+			    	return (Rectangle) ddf.create(commande.excute(  valeurs.get(0),points.get(0),longeur,largeur));	
+				}else {
+					System.out.println("il faut que la longeur(2eme parametre)>largeur(3eme parametre)");
+				
+				}
+				
 				}else {
 					System.out.println("le nom :"+" "+valeurs.get(0)+" existe deja");
 					return null;

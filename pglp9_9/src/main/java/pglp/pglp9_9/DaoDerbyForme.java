@@ -355,7 +355,7 @@ public class DaoDerbyForme implements DAO<Forme> {
 				
 				if (resultSet.getString("TYPE").equals("RECTANGLE")) {
 					
-					p=new Rectangle(resultSet.getString("NAME"), Point.PointFactory(resultSet.getInt("A_X"), resultSet.getInt("A_Y")), Point.PointFactory(resultSet.getInt("B_X"), resultSet.getInt("B_Y")), Point.PointFactory(resultSet.getInt("C_X"), resultSet.getInt("C_Y")),Point.PointFactory(resultSet.getInt("D_X"), resultSet.getInt("D_Y")),resultSet.getInt("largeur"),resultSet.getInt("longeur"));	
+					p=new Rectangle(resultSet.getString("NAME"), Point.PointFactory(resultSet.getInt("A_X"), resultSet.getInt("A_Y")),resultSet.getInt("longeur"),resultSet.getInt("largeur"));
 					
 				}				
 				if (resultSet.getString("type").equals("CERCLE")) {
@@ -365,7 +365,7 @@ public class DaoDerbyForme implements DAO<Forme> {
 				}
 				if (resultSet.getString("TYPE").equals("CAREE")) {
 					
-					p=new Carre(resultSet.getString("NAME"), Point.PointFactory(resultSet.getInt("A_X"), resultSet.getInt("A_Y")), Point.PointFactory(resultSet.getInt("B_X"), resultSet.getInt("B_Y")), Point.PointFactory(resultSet.getInt("C_X"), resultSet.getInt("C_Y")),Point.PointFactory(resultSet.getInt("D_X"), resultSet.getInt("D_Y")),resultSet.getInt("cotee"));
+					p=new Carre(resultSet.getString("NAME"), Point.PointFactory(resultSet.getInt("A_X"), resultSet.getInt("A_Y")),resultSet.getInt("cotee"));
 					
 				}	
 			

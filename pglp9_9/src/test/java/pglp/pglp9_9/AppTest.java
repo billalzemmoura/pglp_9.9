@@ -27,13 +27,17 @@ public class AppTest {
 	CreateForms	creatorForm;
 	@Before
 	public void create() throws Exception {
-	creatorForm=new CreateForms();
-	cercle=creatorForm.excute("cercle", Point.PointFactory(3, 7),67);
-	dessin=creatorForm.excute("dessin");
-	petitDessin=creatorForm.excute("petitdessin");
-	rectangle=creatorForm.excute("rectangle", Point.PointFactory(3, 7),Point.PointFactory(3, 7),Point.PointFactory(3, 7),Point.PointFactory(3, 7),67,78);
-	carre=creatorForm.excute("carre", Point.PointFactory(3, 7),Point.PointFactory(3, 7),Point.PointFactory(3, 7),Point.PointFactory(3, 7),43);
-	triangle=creatorForm.excute("triangle", Point.PointFactory(3, 32),Point.PointFactory(6, 37),Point.PointFactory(89,53) );
+		creatorForm=new CreateCercleExc();
+	cercle=((CreateCercleExc) creatorForm).excute("cercle", Point.PointFactory(3, 7),67);
+	creatorForm=new CreateDessinExc();
+	dessin=((CreateDessin) creatorForm).excute("dessin");
+	petitDessin=((CreateDessin) creatorForm).excute("petitdessin");
+	creatorForm=new CreateRectangleExc();
+	rectangle=((CreateRectangleExc) creatorForm).excute("rectangle", Point.PointFactory(3, 7),7,3);
+	creatorForm=new CreateCarreExc();
+	carre=((CreateCarreExc) creatorForm).excute("carre", Point.PointFactory(3, 7),60);
+	creatorForm=new CreateTriangleExc();
+	triangle=((CreateTriangleExc) creatorForm).excute("triangle", Point.PointFactory(3, 32),Point.PointFactory(6, 37),Point.PointFactory(89,53) );
     ddf=(DaoDerbyForme) DAOFactory.getFormDaoDerby();
     cdd=DAOFactory.getCompositeDaoDerby();
     da=new DrawingApp();
@@ -43,7 +47,7 @@ public class AppTest {
 	
 	@Test
     public void  AddFormeDessin() {
-    AddForme add=new CreateForms();
+    AddForme add=new AddForms();
     add.excute(dessin, cercle);
     System.out.println(dessin.getForme().get(0).getNom());
     assertTrue(dessin.getForme().get(0).getNom().equals(cercle.getNom()));

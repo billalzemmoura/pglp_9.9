@@ -5,24 +5,30 @@ import java.util.Scanner;
 
 
 public class DrawingApp {
+
 DrawingTUI d=new DrawingTUI();
 String commande;
 ExpReg expreg=new ExpReg();
-private CreateForms createForme=new CreateForms();
+private AddForms addFormes=new AddForms();
+private CreateRectangleExc createRectangleExc =new CreateRectangleExc();
+private CreateCarreExc createCarreExc=new CreateCarreExc();
+private CreateCercleExc createCercleExc=new CreateCercleExc();
+private CreateTriangleExc createTriangleExc=new CreateTriangleExc();
+private CreateDessinExc createDessinExc=new CreateDessinExc();
 private Moveformes moveFormes=new Moveformes();
-CreateCercle createCercle = createForme::excute;
-CreateCaree createCaree= createForme::excute;
-CreateRectangle createRectangle = createForme::excute;
-CreateTriangle createTriangle = createForme::excute;
-CreateDessin createDessin = createForme::excute;
+CreateCercle createCercle = createCercleExc::excute;
+CreateCaree createCaree=createCarreExc::excute;
+CreateRectangle createRectangle = createRectangleExc::excute;
+CreateTriangle createTriangle = createTriangleExc::excute;
+CreateDessin createDessin = createDessinExc::excute;
 CommandeMoveForms<Forme> moveForme=moveFormes::excute;
-AddForme add=createForme::excute;
+AddForme add=addFormes::excute;
 
 public DrawingApp() {
 	d.Addcommande("createCercle", createCercle);
 	d.Addcommande("createCaree",  createCaree);
 	d.Addcommande("createTriangle", createTriangle);
-	d.Addcommande("createRectangle", createRectangle);
+	d.Addcommande("createRectangle",createRectangle );
 	d.Addcommande("createDessin", createDessin);
 	d.Addcommande("move", moveForme);
 	d.Addcommande("add", add);
