@@ -119,7 +119,7 @@ public class DrawingTUI {
 	 }
 	 
 	 private Forme ExcuteCommandeQuit(String string, String commande) {
-		System.out.println("tout les formes et les dessins que vous avez crer sont sauvgarder");
+		System.out.println("tout les formes et les dessins que vous avez créer sont sauvgarder");
 		System.exit(0);
 		return null;
 	}
