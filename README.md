@@ -1,4 +1,8 @@
 # pglp_9.9
+<h1>excution du programme</h1>
+<p>acceder au dossier : pglp_9.9-master/pglp9_9</p>
+<p>taper la commande pour génerer le jar :mvn install</p>
+<p>puis vous pouvez lancer l'excution du jar génerer avec les dépendances  dans le dossier target:java -jar le nomdujar.jar</p>
 <h1>Dessin</h1>
 <h2>pour créer un dessin :</h1>
     leNomDuDessin=dessin()
