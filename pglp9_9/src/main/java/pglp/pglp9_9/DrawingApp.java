@@ -52,10 +52,7 @@ public class DrawingApp {
 
 	public static void main(String[] args) throws Exception {
 		DrawingApp main = new DrawingApp();
-		System.out.println(
-				"veuillez ne pas arréter le programme par un CTRL-C (un kill) pour éviter de détruire la base de données ");
-		System.out.println(
-				"si  vous le faite :il faut suprimer le dossier DATABASEDAOO pour que le programme  refonctionne ");
+		
 
 		while (true) {
 			main.run();
