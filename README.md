@@ -37,3 +37,5 @@ afficher(nomFormesOuDessin)
 delete(nomFormesOuDessin)
 
 <p> pour les commandes vous avez le choix soit vous  saisisez toutes les lettres en majuscules ou bien  toutes en  miniscule</p>
+<p>"veuillez éviter de arréter le programme par force car cela peut détruire la base de données</p> 
+<p>si  cela se produit il faut suprimer le dossier DATABASEDAOO pour que le programme  refonctionne </p>
