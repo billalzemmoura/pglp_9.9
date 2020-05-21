@@ -36,8 +36,4 @@ afficher(nomFormesOuDessin)
 <p>  pour supprimer une forme ou un dessin :</p>
 delete(nomFormesOuDessin)
 
-<p> pour les commandes vous avez le choix soit vous les saisisez toutes les lettres en majuscules ou bien  toutes en  miniscule</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> 6fe8bab37fda277d8bb1ebfc4264c43085f147f3
+<p> pour les commandes vous avez le choix soit vous  saisisez toutes les lettres en majuscules ou bien  toutes en  miniscule</p>
